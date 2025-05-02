@@ -16,6 +16,11 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
+/**
+ * アプリケーション全体のレイアウトを定義し、子コンテンツを日本語設定のHTML構造でラップします。
+ *
+ * @param children - レイアウト内に表示するReactノード。
+ */
 export default function RootLayout({
   children,
 }: Readonly<{

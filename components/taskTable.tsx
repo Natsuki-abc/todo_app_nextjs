@@ -3,6 +3,11 @@ import AddTask from "./addTasks"
 import { ReactElement, useState, useEffect } from "react"
 import getData from "./getData"
 
+/**
+ * タスク一覧を表示し、新規タスクの追加機能を提供するReactコンポーネントです。
+ *
+ * 初回マウント時にタスクデータを取得し、リストとして表示します。タスクの追加は{@link AddTask}コンポーネント経由で行われ、追加後はリストが自動的に更新されます。
+ */
 export default function TaskTable() {
   const [taskList, setTaskList] = useState<Array<ReactElement>>([])
 

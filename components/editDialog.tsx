@@ -2,6 +2,15 @@ import { supabase } from "@/utils/supabase/supabase"
 import { Dispatch, SetStateAction, ReactElement, useState } from "react"
 import getData from "./getData"
 
+/**
+ * タスク名を編集するためのモーダルダイアログを表示します。
+ *
+ * 指定されたタスクIDのタスク名を編集し、保存時にSupabaseデータベースを更新します。更新後はタスクリストを再取得して最新状態に反映します。モーダルの表示・非表示は外部から制御されます。
+ *
+ * @param id - 編集対象のタスクID。
+ *
+ * @remark 入力値が空の場合は保存できません。データベース更新時にエラーが発生した場合はコンソールに出力されます。
+ */
 export default function EditDialog(props: {
   id: number,
   showModal: Dispatch<SetStateAction<boolean>>,

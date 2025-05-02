@@ -3,6 +3,13 @@ import { supabase } from "@/utils/supabase/supabase"
 import { Dispatch, SetStateAction, ReactElement, useState } from "react"
 import getData from "./getData"
 
+/**
+ * 新しいタスクを追加し、タスクリストを更新するReactコンポーネントです。
+ *
+ * フォームに入力されたタスク名をSupabaseの`tasks`テーブルに追加し、追加後にタスクリストを再取得してUIを更新します。
+ *
+ * @param taskList - タスクリストの状態を更新する関数。
+ */
 export default function AddTask(props: {
   taskList: Dispatch<SetStateAction<Array<ReactElement>>>;
 }) {
