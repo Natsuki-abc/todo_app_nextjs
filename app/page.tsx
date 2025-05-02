@@ -1,5 +1,10 @@
 import TaskTable from "@/components/taskTable";
 
+/**
+ * タスクテーブルを中央に表示するページコンポーネントです。
+ *
+ * @returns タスクテーブルを含むレイアウト済みのJSX要素。
+ */
 export default async function Index() {
 
   return (

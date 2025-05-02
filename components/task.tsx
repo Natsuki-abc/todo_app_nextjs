@@ -4,6 +4,17 @@ import EditDialog from './editDialog';
 import RemoveDialog from './removeDialog';
 
 
+/**
+ * 単一のタスク情報を表示し、編集・削除用のダイアログを制御するReactコンポーネントです。
+ *
+ * タスク名と最終更新日時を日本語ロケールで表示し、「編集」「削除」ボタンで各ダイアログの表示を切り替えます。
+ *
+ * @param id - タスクの一意な識別子。
+ * @param name - タスク名または説明。
+ * @param updated_at - 最終更新日時（ISO形式の文字列）。
+ *
+ * @returns タスク情報と編集・削除ダイアログを含むReact要素。
+ */
 export default function Task(
   props: { id: number, name: string, updated_at: string, taskList: Dispatch<SetStateAction<Array<ReactElement>>> }
 ) {

@@ -2,6 +2,13 @@ import { supabase } from "@/utils/supabase/supabase"
 import { Dispatch, SetStateAction, ReactElement } from "react"
 import getData from "./getData"
 
+/**
+ * タスク削除の確認ダイアログを表示し、指定したタスクを削除します。
+ *
+ * 指定されたタスクIDの削除を確認するモーダルダイアログを表示し、削除が確定された場合はSupabaseのデータベースから該当タスクを削除します。削除後、タスクリストを再取得して更新します。キャンセルやクローズボタンでダイアログを閉じることも可能です。
+ *
+ * @param id - 削除対象となるタスクのID。
+ */
 export default function RemoveDialog(props: {
   id: number,
   showModal: Dispatch<SetStateAction<boolean>>,
